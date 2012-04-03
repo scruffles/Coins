@@ -330,91 +330,91 @@
                     "year":2010,
                     "state":"Arkansas",
                     "park":"Hot Springs National Park",
-                    "image":"Arkansas2010.jpg"
+                    "image":"Arkansas2010.png"
                 },
                 {
                     "year":2010,
                     "state":"Wyoming",
                     "park":"Yellowstone National Park",
-                    "image":"Wyoming2010.jpg"
+                    "image":"Wyoming2010.png"
                 },
                 {
                     "year":2010,
                     "state":"California",
                     "park":"Yosemite National Park",
-                    "image":"California2010.jpg"
+                    "image":"California2010.png"
                 },
                 {
                     "year":2010,
                     "state":"Arizona",
                     "park":"Grand Canyon National Park",
-                    "image":"Arizona2010.jpg"
+                    "image":"Arizona2010.png"
                 },
                 {
                     "year":2010,
                     "state":"Oregon",
                     "park":"Mt. Hood National Forest",
-                    "image":"Oregon2010.jpg"
+                    "image":"Oregon2010.png"
                 },
                 {
                     "year":2011,
                     "state":"Pennsylvania",
                     "park":"Gettysburg National Military Park",
-                    "image":"Pennsylvania2011.jpg"
+                    "image":"Pennsylvania2011.png"
                 },
                 {
                     "year":2011,
                     "state":"Montana",
                     "park":"Glacier National Park",
-                    "image":"Montana2011.jpg"
+                    "image":"Montana2011.png"
                 },
                 {
                     "year":2011,
                     "state":"Washington",
                     "park":"Olympic National Park",
-                    "image":"Washington2011.jpg"
+                    "image":"Washington2011.png"
                 },
                 {
                     "year":2011,
                     "state":"Mississippi",
                     "park":"Vicksburg National Military Park",
-                    "image":"Mississippi2011.jpg"
+                    "image":"Mississippi2011.png"
                 },
                 {
                     "year":2011,
                     "state":"Oklahoma",
                     "park":"Chickasaw National Recreation Area",
-                    "image":"Oklahoma2011.jpg"
+                    "image":"Oklahoma2011.png"
                 },
                 {
                     "year":2012,
                     "state":"Puerto Rico",
                     "park":"El Yunque National Forest",
-                    "image":"PuertoRico2012.jpg"
+                    "image":"PuertoRico2012.png"
                 },
                 {
                     "year":2012,
                     "state":"New Mexico",
                     "park":"Chaco Culture National Historical Park",
-                    "image":"NewMexico2012.jpg"
+                    "image":"NewMexico2012.png"
                 },
                 {
                     "year":2012,
                     "state":"Maine",
                     "park":"Acadia National Park",
-                    "image":"Maine2012.jpg"
+                    "image":"Maine2012.png"
                 },
                 {
                     "year":2012,
                     "state":"Hawaii",
                     "park":"Hawaii Volcanoes National Park",
-                    "image":"Hawaii2012.jpg"
+                    "image":"Hawaii2012.png"
                 },
                 {
                     "year":2012,
                     "state":"Alaska",
                     "park":"Denali National Park",
-                    "image":"Alaska2012.jpg"
+                    "image":"Alaska2012.png"
                 }
           ]
         }
