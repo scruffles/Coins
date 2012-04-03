@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html manifest="coins.appcache">
+<head>
+    <title>Coins</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!--<meta name="apple-mobile-web-app-capable" content="yes" />-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-startup-image" href="splash.jpg"/>
+
+    <link rel="shortcut icon" href="Icon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="Icon-57.png">
+    <link rel="apple-touch-icon" href="Icon-114.png"/>
+
+    <link rel="stylesheet" href="js/lib/jquery.mobile-1.0.1.min.css"/>
+
+    <script src="js/lib/jquery-1.6.4.min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/jquery.mobile-1.0.1.min.js"></script>
+    <script src="js/lib/handlebars-1.0.0.beta.6.js"></script>
+
+    <script id="pageOneTemplate" type="text/x-handlebars-template">
+        <div style="z-index: 3; position:relative; width: 100%;">
+            <ul class="listView" data-role="listview" data-inset="true">
+                {{#each collections}}
+                <li>
+                    <a href="#{{this.id}}">
+                        <h3>{{this.title}}</h3>
+                        <p class="ui-li-desc">{{subTitle}}</p>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div style="position: absolute; bottom: 0px; right: 0px; z-index: 1">
+            <img src="bg.png" style="opacity: .3">
+        </div>
+    </script>
+
+    <script id="collectionPagesTemplate" type="text/x-handlebars-template">
+        {{#each collections}}
+        <div data-role="page" id="{{id}}" data-theme="a" data-add-back-btn="true">
+            <div data-role="header" data-position="fixed">
+                <h1>{{title}}</h1>
+            </div>
+            <div data-role="content" data-theme="a">
+                <h2>{{title}}</h2>
+
+                <p>{{description}}</p>
+
+                {{#each sortMethods}}
+                <a href="#{{id}}" data-role="button">{{description}}</a>
+                {{/each}}
+
+                <h3 style="text-align: center">By Year</h3>
+                <ul data-role="listview" data-inset="true">
+                    {{#each uniqueYears}}
+                    <li><a href="#{{../id}}{{this}}">{{this}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+
+    <script id="byYearTemplate" type="text/x-underscore-template">
+        <% _.each(collections, function(collection) { %>
+        <% _.each(collection.uniqueYears, function(year) { %>
+        <div data-role="page" id="<%=collection.id%><%=year%>" data-theme="c" data-add-back-btn="true">
+            <div data-role="header" data-position="fixed">
+                <h1><%=year%> <%=collection.shortTitle%></h1>
+                <a onclick="toggleEdit();" data-icon="locked" class="ui-btn-right">Edit</a>
+            </div>
+            <div data-role="content">
+                <div class="whiteGradient" style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 2"></div>
+                <div style="z-index: 3; position:relative; width: 100%;">
+                    <% var thisYearsCoins = _.filter(collection.coins, function(coin){ return coin.year === year; }); %>
+                    <% _.each(thisYearsCoins, function(coin) { %>
+                    <h3 style="margin-bottom: 4px;"><%=coin.state%></h3>
+                    <div style="width: 130px; float: right;">
+                        <select name="slider" data-role="slider" data-coin-id="<%=coin.id%>" class="slider">
+                            <option value="missing">Missing</option>
+                            <option value="found" <%=localStorage[coin.id] ? 'selected="true"' : ''%>>Found</option>
+                        </select>
+                    </div>
+                    <img src="images/<%=coin.image%>" height="200" style="padding-bottom: 20px;">
+                    <% }); %>
+                </div>
+                <div style="position: absolute; bottom: 0px; right: 0px; z-index: 1">
+                    <img src="bg.png" style="opacity: .3">
+                </div>
+            </div>
+        </div>
+        <% }); %>
+        <% }); %>
+    </script>
+
+    <script id="sortIndexTemplate" type="text/x-underscore-template">
+        <% _.each(collections, function(collection) { %>
+        <% _.each(collection.sortMethods, function(sortMethod) { %>
+        <div data-role="page" id="<%=sortMethod.id%>" data-theme="c" data-add-back-btn="true">
+            <div data-role="header" data-position="fixed">
+                <h1><%=collection.title%></h1>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true" data-filter="true">
+                    <%
+                    var lastLetter = null;
+                    var anyListItems = false;
+                    var sorted = _.sortBy(collection.coins, function(coin){ return coin[sortMethod.property]; });
+                    _.each(sorted, function(coin) {
+                    var currentLetter = coin[sortMethod.property].charAt(0).toUpperCase();
+                    if (lastLetter !== currentLetter) {
+                    lastLetter = currentLetter;
+                    %>
+                    <li data-role="list-divider"><%=lastLetter%></li>
+                    <% } %>
+                    <li><a href="#<%=coin.id%>"><%=coin[sortMethod.property]%></a></li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+        <% }); %>
+        <% }); %>
+    </script>
+
+    <script id="singleCoinTemplate" type="text/x-underscore-template">
+        <% _.each(collections, function(collection) { %>
+        <% _.each(collection.sortMethods, function(sortMethod) { %>
+        <% _.each(collection.coins, function(coin) { %>
+        <div data-role="page" id="<%=coin.id%>" data-theme="c" data-add-back-btn="true">
+            <div data-role="header" data-position="fixed">
+                <h1><%=collection.title%></h1>
+                <a onclick="toggleEdit();" data-icon="locked" class="ui-btn-right">Edit</a>
+            </div>
+            <div data-role="content">
+                <div class="whiteGradient" style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 2"></div>
+                <div style="z-index: 3; position:relative; width: 100%;">
+                    <h3 style="margin-bottom: 4px;"><%=coin.title%></h3>
+                    <img src="images/<%=coin.image%>" height="200">
+
+                    <div style="width: 150px; float: right;">
+                        <select name="slider" id="flip-b" data-role="slider" data-coin-id="<%=coin.id%>" class="slider">
+                            <option value="missing">Missing</option>
+                            <option value="found" <%=localStorage[coin.id] ? 'selected="true"' : ''%>>Found</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div style="position: absolute; bottom: 0px; right: 0px; z-index: 1">
+                    <img src="bg.png" style="opacity: .3">
+                </div>
+            </div>
+        </div>
+        <% }); %>
+        <% }); %>
+        <% }); %>
+    </script>
+
+    <script lang="text/javascript">
+        $.ajaxSetup({ cache:true });
+        function toggleEdit() {
+            var currentValue = $('.slider')[0].disabled;
+            $('.slider').slider(currentValue ? 'enable' : 'disable');
+            if (currentValue) {
+                localStorage.editable = true;
+            } else {
+                localStorage.removeItem('editable');
+            }
+        }
+        function addCalculatedFields(data) {
+            _.each(data.collections, function (collection) {
+                var years = _.map(collection.coins, function (coin) {
+                    return coin.year;
+                });
+                collection.uniqueYears = _.uniq(years);
+                _.each(collection.coins, function (coin) {
+                    coin.id = coin.image.replace(/\.[^\.]*$/, '');
+                    coin.title = coin.state ? coin.state : coin.territory;
+                });
+            });
+        }
+        function renderScreen(data) {
+            addCalculatedFields(data);
+            $('#main div[data-role="content"]').append(Handlebars.compile($("#pageOneTemplate").html())(data));
+            $('#main div[data-role="header"]').append('<h1 style="text-align:center;">Coins</h1>'); // adding late so it doesn't show while js is running
+            $('body').append(Handlebars.compile($("#collectionPagesTemplate").html())(data));
+            $('body').append(_.template($("#byYearTemplate").html())(data));
+            $('body').append(_.template($("#sortIndexTemplate").html())(data));
+            $('body').append(_.template($("#singleCoinTemplate").html())(data));
+            $( "select" ).bind( "change", function(event, ui) {
+                var found = event.target.value === "found";
+                var coinId = $(event.target).data('coin-id');
+                $('select[data-coin-id="' + coinId + '"]').val(found ? "found" : "missing");
+                if (found) {
+                    localStorage.setItem(coinId, true);
+                }else {
+                    localStorage.removeItem(coinId);
+                }
+            });
+            $('.listView').listview();
+            $('.slider').slider();
+            $('.slider').slider(localStorage.editable ? 'enable' : 'disable');
+        }
+        $(function () {
+            $.getJSON('coins.json',
+                    function (newData) {
+                        renderScreen(newData);
+                    }).error(function (x) {
+                        alert('Unable to load data (coins.json) from the server');
+                    });
+        });
+    </script>
+
+    <style>
+        .whiteGradient {
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.8, rgb(255, 255, 255)));
+        }
+        .ui-icon-locked {
+            background-image: url("lock-closed.png");
+        }
+    </style>
+</head>
+<body>
+<div data-role="page" id="main">
+    <div data-role="header" style="z-index:10"></div>
+    <div data-role="content"></div>
+</div>
+
+</body>
+</html>

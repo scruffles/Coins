@@ -1,0 +1,422 @@
+{
+    "collections":[
+        {
+            "id" : "fsq",
+            "title":"50 State Quarters",
+            "shortTitle":"State Quarters",
+            "subTitle":"1999-2008",
+            "description":"The 50 State Quarters program is the release of a series of circulating commemorative coins by the United States Mint. Between 1999 and 2008, it featured each of the 50 U.S. states on unique designs for the reverse of the quarter.",
+            "sortMethods":[
+                {
+                    "id":"fiftyStateAlphaByState",
+                    "description":"Alphabetically by State",
+                    "property":"state"
+                }
+            ],
+            "coins":[
+                {
+                    "year":1999,
+                    "state":"Delaware",
+                    "image":"Delaware1999.png"
+                },
+                {
+                    "year":1999,
+                    "state":"Pennsylvania",
+                    "image":"Pennsylvania1999.png"
+                },
+                {
+                    "year":1999,
+                    "state":"Georgia",
+                    "image":"Georgia1999.png"
+                },
+                {
+                    "year":1999,
+                    "state":"Connecticut",
+                    "image":"Connecticut1999.png"
+                },
+                {
+                    "year":2000,
+                    "state":"Massachusetts",
+                    "image":"Massachusetts2000.png"
+                },
+                {
+                    "year":2000,
+                    "state":"Maryland",
+                    "image":"Maryland2000.png"
+                },
+                {
+                    "year":2000,
+                    "state":"South Carolina",
+                    "image":"SouthCarolina2000.png"
+                },
+                {
+                    "year":2000,
+                    "state":"New Hampshire",
+                    "image":"NewHampshire2000.png"
+                },
+                {
+                    "year":2000,
+                    "state":"Virginia",
+                    "image":"Virginia2000.png"
+                },
+                {
+                    "year":2001,
+                    "state":"New York",
+                    "image":"NewYork2001.png"
+                },
+                {
+                    "year":2001,
+                    "state":"North Carolina",
+                    "image":"NorthCarolina2001.png"
+                },
+                {
+                    "year":2001,
+                    "state":"Rhode Island",
+                    "image":"RhodeIsland2001.png"
+                },
+                {
+                    "year":2001,
+                    "state":"Vermont",
+                    "image":"Vermont2001.png"
+                },
+                {
+                    "year":2001,
+                    "state":"Kentucky",
+                    "image":"Kentucky2001.png"
+                },
+                {
+                    "year":2002,
+                    "state":"Tennessee",
+                    "image":"Tennessee2002.png"
+                },
+                {
+                    "year":2002,
+                    "state":"Ohio",
+                    "image":"Ohio2002.png"
+                },
+                {
+                    "year":2002,
+                    "state":"Louisiana",
+                    "image":"Louisiana2002.png"
+                },
+                {
+                    "year":2002,
+                    "state":"Indiana",
+                    "image":"Indiana2002.png"
+                },
+                {
+                    "year":2002,
+                    "state":"Mississippi",
+                    "image":"Mississippi2002.png"
+                },
+                {
+                    "year":2003,
+                    "state":"Illinois",
+                    "image":"Illinois2003.png"
+                },
+                {
+                    "year":2003,
+                    "state":"Alabama",
+                    "image":"Alabama2003.png"
+                },
+                {
+                    "year":2003,
+                    "state":"Maine",
+                    "image":"Maine2003.png"
+                },
+                {
+                    "year":2003,
+                    "state":"Missouri",
+                    "image":"Missouri2003.png"
+                },
+                {
+                    "year":2003,
+                    "state":"Arkansas",
+                    "image":"Arkansas2003.png"
+                },
+                {
+                    "year":2004,
+                    "state":"Michigan",
+                    "image":"Michigan2004.png"
+                },
+                {
+                    "year":2004,
+                    "state":"Florida",
+                    "image":"Florida2004.png"
+                },
+                {
+                    "year":2004,
+                    "state":"Texas",
+                    "image":"Texas2004.png"
+                },
+                {
+                    "year":2004,
+                    "state":"Iowa",
+                    "image":"Iowa2004.png"
+                },
+                {
+                    "year":2004,
+                    "state":"Wisconsin",
+                    "image":"Wisconsin2004.png"
+                },
+                {
+                    "year":2005,
+                    "state":"California",
+                    "image":"California2005.png"
+                },
+                {
+                    "year":2005,
+                    "state":"Minnesota",
+                    "image":"Minnesota2005.png"
+                },
+                {
+                    "year":2005,
+                    "state":"Oregon",
+                    "image":"Oregon2005.png"
+                },
+                {
+                    "year":2005,
+                    "state":"Kansas",
+                    "image":"Kansas2005.png"
+                },
+                {
+                    "year":2005,
+                    "state":"West Virginia",
+                    "image":"WestVirginia2005.png"
+                },
+                {
+                    "year":2006,
+                    "state":"Nevada",
+                    "image":"Nevada2006.png"
+                },
+                {
+                    "year":2006,
+                    "state":"Nebraska",
+                    "image":"Nebraska2006.png"
+                },
+                {
+                    "year":2006,
+                    "state":"Colorado",
+                    "image":"Colorado2006.png"
+                },
+                {
+                    "year":2006,
+                    "state":"North Dakota",
+                    "image":"NorthDakota2006.png"
+                },
+                {
+                    "year":2006,
+                    "state":"South Dakota",
+                    "image":"SouthDakota2006.png"
+                },
+                {
+                    "year":2007,
+                    "state":"Montana",
+                    "image":"Montana2007.png"
+                },
+                {
+                    "year":2007,
+                    "state":"Washington",
+                    "image":"Washington2007.png"
+                },
+                {
+                    "year":2007,
+                    "state":"Idaho",
+                    "image":"Idaho2007.png"
+                },
+                {
+                    "year":2007,
+                    "state":"Wyoming",
+                    "image":"Wyoming2007.png"
+                },
+                {
+                    "year":2007,
+                    "state":"Utah",
+                    "image":"Utah2007.png"
+                },
+                {
+                    "year":2008,
+                    "state":"Oklahoma",
+                    "image":"Oklahoma2008.png"
+                },
+                {
+                    "year":2008,
+                    "state":"New Mexico",
+                    "image":"NewMexico2008.png"
+                },
+                {
+                    "year":2008,
+                    "state":"Arizona",
+                    "image":"Arizona2008.png"
+                },
+                {
+                    "year":2008,
+                    "state":"Alaska",
+                    "image":"Alaska2008.png"
+                },
+                {
+                    "year":2008,
+                    "state":"Hawaii",
+                    "image":"Hawaii2008.png"
+                }
+            ]
+        },
+        {
+            "id" : "dcAndTerritoriesQuarters",
+            "title":"D.C. and U.S. Territories Quarters",
+            "shortTitle":"State Quarters",
+            "subTitle":"2009",
+            "description":"The District of Columbia and United States Territories Quarter Program was a one-year coin program of the United States Mint that saw quarters being minted in 2009[1] to honor the District of Columbia and the unincorporated United States insular areas of Puerto Rico, Guam, United States Virgin Islands, American Samoa, and the Northern Mariana Islands.",
+            "sortMethods":[
+                {
+                    "id":"dcAndTerritoriesAlphaByState",
+                    "description":"Alphabetically by State",
+                    "property":"territory"
+                }
+            ],
+            "coins":[
+                {
+                    "year":2009,
+                    "territory":"District of Columbia",
+                    "image":"DistrictOfColumbia2009.png"
+                },
+                {
+                    "year":2009,
+                    "territory":"Puerto Rico",
+                    "image":"PuertoRico2009.png"
+                },
+                {
+                    "year":2009,
+                    "territory":"Guam",
+                    "image":"Guam2009.png"
+                },
+                {
+                    "year":2009,
+                    "territory":"American Samoa",
+                    "image":"AmericanSamoa2009.png"
+                },
+                {
+                    "year":2009,
+                    "territory":"U.S. Virgin Islands",
+                    "image":"USVirginIslands2009.png"
+                },
+                {
+                    "year":2009,
+                    "territory":"Northern Mariana Islands",
+                    "image":"NorthernMarianaIslands2009.png"
+                }
+           ]
+        },
+        {
+            "id" : "americaTheBeautifulQuarters",
+            "title":"America the Beautiful Quarters",
+            "shortTitle":"America Beautiful",
+            "subTitle":"2010-2021+",
+            "description":"The America the Beautiful Quarters are a series of quarters issued by the United States Mint from 2010 until at least 2021. There will be five new reverse designs each year (one in 2021) each depicting a national park or national site (one from each state, the federal district, and each territory).",
+            "sortMethods":[
+                {
+                    "id":"americaTheBeautifulAlphaByState",
+                    "description":"Alphabetically by State / Territory",
+                    "property":"state"
+                },
+                {
+                    "id":"americaTheBeautifulAlphaByPark",
+                    "description":"Alphabetically by Park / Site",
+                    "property":"park"
+                }
+            ],
+            "coins":[
+                {
+                    "year":2010,
+                    "state":"Arkansas",
+                    "park":"Hot Springs National Park",
+                    "image":"Arkansas2010.jpg"
+                },
+                {
+                    "year":2010,
+                    "state":"Wyoming",
+                    "park":"Yellowstone National Park",
+                    "image":"Wyoming2010.jpg"
+                },
+                {
+                    "year":2010,
+                    "state":"California",
+                    "park":"Yosemite National Park",
+                    "image":"California2010.jpg"
+                },
+                {
+                    "year":2010,
+                    "state":"Arizona",
+                    "park":"Grand Canyon National Park",
+                    "image":"Arizona2010.jpg"
+                },
+                {
+                    "year":2010,
+                    "state":"Oregon",
+                    "park":"Mt. Hood National Forest",
+                    "image":"Oregon2010.jpg"
+                },
+                {
+                    "year":2011,
+                    "state":"Pennsylvania",
+                    "park":"Gettysburg National Military Park",
+                    "image":"Pennsylvania2011.jpg"
+                },
+                {
+                    "year":2011,
+                    "state":"Montana",
+                    "park":"Glacier National Park",
+                    "image":"Montana2011.jpg"
+                },
+                {
+                    "year":2011,
+                    "state":"Washington",
+                    "park":"Olympic National Park",
+                    "image":"Washington2011.jpg"
+                },
+                {
+                    "year":2011,
+                    "state":"Mississippi",
+                    "park":"Vicksburg National Military Park",
+                    "image":"Mississippi2011.jpg"
+                },
+                {
+                    "year":2011,
+                    "state":"Oklahoma",
+                    "park":"Chickasaw National Recreation Area",
+                    "image":"Oklahoma2011.jpg"
+                },
+                {
+                    "year":2012,
+                    "state":"Puerto Rico",
+                    "park":"El Yunque National Forest",
+                    "image":"PuertoRico2012.jpg"
+                },
+                {
+                    "year":2012,
+                    "state":"New Mexico",
+                    "park":"Chaco Culture National Historical Park",
+                    "image":"NewMexico2012.jpg"
+                },
+                {
+                    "year":2012,
+                    "state":"Maine",
+                    "park":"Acadia National Park",
+                    "image":"Maine2012.jpg"
+                },
+                {
+                    "year":2012,
+                    "state":"Hawaii",
+                    "park":"Hawaii Volcanoes National Park",
+                    "image":"Hawaii2012.jpg"
+                },
+                {
+                    "year":2012,
+                    "state":"Alaska",
+                    "park":"Denali National Park",
+                    "image":"Alaska2012.jpg"
+                }
+          ]
+        }
+    ]
+}
