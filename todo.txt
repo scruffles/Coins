@@ -1,5 +1,4 @@
 1.0
-* shrink images to more manageable sizes
 * use transparency on all coin images
 * toggle lock icon?
 * Splash screen
